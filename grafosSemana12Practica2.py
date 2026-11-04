@@ -35,5 +35,13 @@ def contar_aristas(grafo):
 
 print(contar_aristas(grafo))
 
-    
+def estan_conectados(grafo, origen, destino):
+    if origen not in grafo or destino not in grafo:
+        return False
+    return destino in grafo[origen]
 
+print(estan_conectados(grafo, "A", "B"))
+print(estan_conectados(grafo, "A", "F"))
+print(estan_conectados(grafo, "X", "A"))
+
+    
